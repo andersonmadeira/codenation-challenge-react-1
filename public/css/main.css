@@ -1,6 +1,10 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+:root {
+	--accent-color: #e4bb23;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -77,7 +81,7 @@ body {
 }
 
 .hero__top__menu__items__item a:hover {
-	color: #e4bb23;
+	color: var(--accent-color);
 }
 
 .hero__user-info {
@@ -140,7 +144,7 @@ body {
 }
 
 .hero__content__movie-genres__genre a:hover {
-	color: #e4bb23;
+	color: var(--accent-color);
 }
 
 .hero__content__button {
@@ -151,7 +155,7 @@ body {
 	padding: 15px 50px;
 	color: #000;
 	text-decoration: none;
-	background-color: #e4bb23;
+	background-color: var(--accent-color);
   border-radius: 40px;
   position: relative;
   transition: all 0.2s ease-in-out;
@@ -179,4 +183,196 @@ body {
 
 .hero__content__info p:last-child {
 	color: #bc9a1d;
+}
+
+.catalog {
+	background-color: #f2f2f2;
+	width: 100%;
+}
+
+.catalog__menu__items {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+	padding: 0 20px;
+	margin: 0 auto;
+	border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.catalog__menu__items__item {
+	margin: 0 20px;
+}
+
+.catalog__menu__items__item a {
+	display: inline-block;
+	color: var(--accent-color);
+	padding: 25px 0;
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.2 ease-in-out;
+	box-shadow: inset 0 -1px 0 transparent;
+}
+
+.catalog__menu__items__item a:hover {
+	box-shadow: inset 0 -1px 0 var(--accent-color);
+}
+
+.catalog__movie-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	padding: 20px 0;
+	width: 100%;
+}
+
+.catalog__movie-list__item {
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+	background-color: #fff;
+	margin-bottom: 30px;
+	overflow: hidden;
+	width: 24%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.catalog__movie-list__item:hover .catalog__movie-list__item__poster__info {
+	opacity: 1;
+	visibility: visible;
+}
+
+.catalog__movie-list__item__poster {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+
+.catalog__movie-list__item__poster img {
+	width: 100%;
+	height: auto;
+}
+
+.catalog__movie-list__item__poster__info {
+	opacity: 0;
+	visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: all 0.2s ease-in-out;
+}
+
+.catalog__movie-list__item__poster__info h3 {
+	color: var(--accent-color);
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	text-transform: uppercase;
+}
+
+.catalog__movie-list__item__poster__info a {
+	color: #fff;
+	font-size: 3rem;
+	transition: all 0.2s ease-in-out;
+}
+
+.catalog__movie-list__item__info {
+	padding: 10px;
+  width: 100%;
+}
+
+.catalog__movie-list__item__info__title {
+	font-size: 1.3em;
+	font-weight: bold;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.catalog__movie-list__item__info__genre {
+	margin: 10px 0;
+}
+
+.catalog__movie-list__item__info__genre a {
+	text-decoration: none;
+  font-size: .8rem;
+  color: var(--accent-color);
+}
+
+.catalog__movie-list__item__info__rating {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.catalog__movie-list__item__info__rating i {
+	color: #ccc;
+  cursor: pointer;
+}
+
+.catalog__movie-list__item__info__rating i:hover {
+	color: #e74c3c;
+}
+
+.footer {
+	color: #bababa;
+	background-color: #fff;
+	padding: 20px 0;
+	text-align: center;
+	width: 100%;
+}
+
+.footer .container {
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__social-list {
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+}
+
+.footer__social-list__item {
+	margin: 0 20px;
+}
+
+.footer__social-list__item:last-child {
+	margin-right: 0;
+}
+
+.footer__social-list__item a {
+	font-size: 1.5rem;
+	color: #bababa;
+	text-decoration: none;
+	transition: all 0.2s ease-in-out;
+}
+
+.footer__social-list__item a:hover i.fa-instagram {
+	color: #e95950;
+}
+
+.footer__social-list__item a:hover i.fa-facebook-official {
+	color: #3b5998;
+}
+
+.footer__social-list__item a:hover i.fa-twitter {
+	color: #55acee;
 }
